@@ -1,1 +1,1 @@
-Piatra, foarfece si hartie in JavaScript.dsfsdf
+Piatra, foarfece si hartie in JavaScript.
