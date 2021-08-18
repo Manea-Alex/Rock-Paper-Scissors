@@ -4,115 +4,54 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+
     <title>Document</title>
 </head>
-<body>
 
-    <script>
-        function computerPlay()
-        {
-            const array = ["Rock" , "Paper", "Scissors"];
-            let selection = array[Math.floor(Math.random()* array.length)];
-            return selection;
-        }
-        let scorePlayer = 0;
-        let scoreComputer = 0;
-        function playRound(playerSelection, computerSelection)
-        {
-           playerSelection = prompt("Please choose between rock, paper and scissors")
-           const lowerCasePlayer = playerSelection.toLowerCase();
-           computerSelection = computerPlay();
-           const lowerCaseComputer = computerSelection.toLowerCase();
-           console.log(playerSelection);
-           console.log(computerSelection);
-          
-           
-           
+<body style="background-color: rgb(221, 218, 215);">
 
-           switch(lowerCasePlayer)
-           {
-               case "rock":
-                   if(lowerCaseComputer == "paper")
-                   {
-                    console.log(`Congratulations, you won. The computer chose ${lowerCaseComputer}`)
-                    scorePlayer++;
-                   }
-                    else if(lowerCaseComputer == "rock")
-                    console.log(`It's a tie. The computer chose ${lowerCaseComputer}`);
-                    else 
-                    {
-                    console.log(`You lost.The computer chose ${lowerCaseComputer}`);
-                    scoreComputer++;
-                    }
-                    break;
+    <!-- <div class="buttons">
+        <button type="button" value="rock" onclick="rockSelector()" id="rock">Rock</button>
+        <button type="button" value="paper" onclick="paperSelector()" id="paper">Paper</button>
+        <button type="button" value="scissors" onclick="scissorsSelector()" id="scissors" ><img  src="images/istockphoto-640274128-612x612.jpg" width="70" height="40"></button>
+    </div> -->
 
-                case "paper":
-                if(lowerCaseComputer == "rock")
-                {
-                console.log(`Congratulations, you won. The computer chose ${lowerCaseComputer}`);
-                scorePlayer++;
-                }
-                else if(lowerCaseComputer == "paper")
-                console.log(`It's a tie. The computer chose ${lowerCaseComputer}`);
-                else 
-                {
-                    console.log(`You lost.The computer chose ${lowerCaseComputer}`);
-                    scoreComputer++;
-                }
-                    break;
+    <div class="introduction">
+        <h1> <small>The </small>Rock, Paper, Scissors</h1>
+        <h3> First to 5 wins</h3>
+    </div>
+   
+    <div class="input-wrap">
+    <form onSubmit="return false" id="form">   <!-- prevents refreshing the page -->
+        <input id="rock" type="image" src="images/dwayne-the-rock-johnson-gettyimages-1061959920.jpg" onclick="rockSelector()" >
+        <input id="paper" type="image" src="images/download.jpeg" onclick="paperSelector()" >
+        <input id="scissors" type="image" src="images/depp.jpg" onclick="scissorsSelector()" >
+    </form>
 
-                case "scissors":
-                if(lowerCaseComputer == "paper")
-                {
-                console.log(`Congratulations, you won. The computer chose ${lowerCaseComputer}`);
-                scorePlayer++;
-                }
-                else if(lowerCaseComputer == "scissors")
-                console.log(`It's a tie. The computer chose ${lowerCaseComputer}`);
-                else 
-                {
-                    console.log(`You lost.The computer chose ${lowerCaseComputer}`);
-                    scoreComputer++;
-                }
-                    break;
-                default: 
-                 console.log("Please choose between rock, paper and scissors. Check your spelling");
-                 break;
+    <div class="results-wrap">
+        <div id="score">Score: You - Computer -
+        </div>
+        <div id="rounds">Round: </div>
+        <div class="button-container" >
+            <button id="new-game" onclick=refresh()> New Game</button>
+        </div>
+        
+        <div id="results">
+        </div>
+    </div>
+    <div class="enemy-choice-wrap">
+        <span class="enemy-choice">Computer's choice</span>
+        <img id="choice-pic" src="images/invalidResult.jpg">
+    </div>
+    <div class="button">
+        
+    </div>
+</div>
 
-           }
-           
 
-        }
-        let playerSelection;
-           let computerSelection;
-
-        function game()
-        {
-            let keepGoing = 5;
-            
-            while(keepGoing>0)
-            {
-             playRound(playerSelection,computerSelection);
-             keepGoing--;
-            }
-            if(scorePlayer > scoreComputer)
-            console.log(`The overall winner of this 5 game round is the Player with a score of ${scorePlayer} to ${scoreComputer}`);
-            else if( scoreComputer > scorePlayer)
-            console.log(`The overall winner of this 5 game round is the Computer with a score of ${scoreComputer} to ${scorePlayer}`);
-            else
-            console.log("It's a tie");
-
-        }
-
-         game();
-           
-
-        // playRound("RocK","pAPer");
-        // let computerSelection = computerPlay();
-
-    
-
-    </script>
-    
+   
 </body>
+</div>
 </html>
