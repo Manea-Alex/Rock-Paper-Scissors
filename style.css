@@ -1,0 +1,137 @@
+
+.introduction{
+    text-align: center;
+}
+.buttons{
+    margin-top: 400px;
+    margin-left: 550px;
+    display: inline-flex;
+    
+}
+
+#form{
+    margin-top: 70px;
+    justify-content: center;
+    
+  
+ 
+    display: flex;
+}
+#rock{
+    margin-left:50px;
+    margin-right:50px;
+    border: 8px;
+    border-color: red;
+    border-style:groove;
+    width: 140px;
+    height:150px;
+}
+#rock:hover{
+    border: 8px;
+    border-color: rgb(25, 171, 207);
+    border-style:groove;
+}
+
+.results-wrap{
+    border:10px;
+    border-style: double;
+    border-color: rgb(25, 171, 207);
+    height:180px;
+    width:500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 120px;
+    margin-left: 280px;
+}
+
+#results{
+    position: fixed;
+    font-size: 16px;
+}
+#score{
+    margin-top: -120px;
+    margin-left: -280px;
+    font-size: 18px;
+    position:fixed;
+}
+#rounds
+{
+    margin-top:-115px;
+    margin-left: 300px;
+    font-size: 18px;
+    position:fixed;
+}
+#new-game{
+    margin-top:-70px;
+    margin-left: -8px;
+    position: fixed;
+    
+
+}
+
+#paper{
+    margin-left:50px;
+    margin-right:50px;
+    border: 8px;
+    border-color: red;
+    border-style:groove;
+    width: 140px;
+    height:150px;
+}
+
+#paper:hover{
+    border: 8px;
+    border-color: rgb(25, 171, 207);
+    border-style:groove;
+}
+
+#scissors{
+    margin-left:50px;
+    margin-right:50px;
+    border: 8px;
+    border-color: red;
+    border-style:groove;
+    width: 140px;
+    height:150px;
+}
+
+#scissors:hover{
+    border: 8px;
+    border-color: rgb(25, 171, 207);
+    border-style:groove;
+}
+
+.input-wrap{
+    border-color: seagreen;
+    border-style: double;
+    height:300px;
+    width:900px;
+    margin: auto;
+}
+
+.enemy-choice-wrap{
+    border:10px;
+    border-style: double;
+    border-color: rgb(236, 196, 19);
+    height:180px;
+    width:200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: -200px;
+    margin-left: 60px;
+}
+
+.enemy-choice{
+    margin-top: -125px;
+    position: fixed;
+}
+
+#choice-pic{
+    margin-top: 45px;
+    width:100px;
+    height:110px;
+ border: 5px solid rgba(204, 39, 196, 0.787); 
+
+}
